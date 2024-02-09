@@ -2,13 +2,14 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<VBox alignment="CENTER" prefHeight="290.0" prefWidth="219.0" spacing="20.0" xmlns="http://javafx.com/javafx/16"
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/16"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dog.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <children>
+    <VBox>
         <Label text="Name"/>
         <TextField fx:id="nameField"/>
 
@@ -30,5 +31,17 @@
         <Button onAction="#setDog" text="Inscribir mascota"/>
 
         <TextArea minHeight="200" fx:id="textArea"/>
-    </children>
-</VBox>
+    </VBox>
+    <VBox>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn text="Nombre" fx:id="nameColumn"/>
+                <TableColumn text="Raza" fx:id="breedColumn"/>
+                <TableColumn text="Altura" fx:id="heightColumn"/>
+                <TableColumn text="Peso" fx:id="weightColumn"/>
+                <TableColumn text="Genero" fx:id="genderColumn"/>
+                <TableColumn text="Edad" fx:id="ageColumn"/>
+            </columns>
+        </TableView>
+    </VBox>
+</HBox>

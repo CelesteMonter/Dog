@@ -1,48 +1,46 @@
 package com.example.dog;
 
-public class Dog {
-    public String name;
-    public String breed;
-    public Double height;
-    public Double weight;
-    // 0 female, 1 male
-    public Integer gender;
-    public Integer age;
+import javafx.beans.property.SimpleStringProperty;
 
-    Dog(String name, String breed, Double height, Double weight, Integer gender, Integer age) {
-        this.name = name;
-        this.breed = breed;
-        this.height = height;
-        this.weight = weight;
-        this.gender = gender;
-        this.age = age;
+public class Dog {
+    public SimpleStringProperty name;
+    public SimpleStringProperty breed;
+    public SimpleStringProperty height;
+    public SimpleStringProperty weight;
+    // 0 female, 1 male
+    public SimpleStringProperty gender;
+    public SimpleStringProperty age;
+
+    Dog(String name, String breed, String height, String weight, String gender, String age) {
+        this.name = new SimpleStringProperty(name);
+        this.breed = new SimpleStringProperty(breed);
+        this.height = new SimpleStringProperty(height);
+        this.weight = new SimpleStringProperty(weight);
+        this.gender = new SimpleStringProperty(gender);
+        this.age = new SimpleStringProperty(age);
     }
 
     String getName() {
-        return name;
+        return name.get();
     }
 
     String getBreed() {
-        return breed;
+        return breed.get();
     }
 
     String getHeight() {
-        return height.toString();
+        return height.get();
     }
 
     String getWeight() {
-        return weight.toString();
+        return weight.get();
     }
 
     String getGender() {
-        if (gender == 0) {
-            return "Female";
-        } else {
-            return "Male";
-        }
+        return gender.get();
     }
 
     String getAge() {
-        return age.toString();
+        return age.get();
     }
 }
