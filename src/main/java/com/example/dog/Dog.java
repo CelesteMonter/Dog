@@ -1,25 +1,19 @@
 package com.example.dog;
 
 public class Dog {
-
-    //Atributos
-
     public String name;
-    public String raza;
-    public String altura;
+    public String breed;
+    public String height;
 
-    //Operaciones
-
-    void comer()
-    {
+    void eat() {
 
     }
-    void dormir()
-    {
+
+    void sleep() {
 
     }
-    void ladrar()
-    {
+
+    void bark() {
 
     }
 }
