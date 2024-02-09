@@ -10,22 +10,22 @@
     </padding>
     <children>
         <Label text="Name"/>
-        <TextField fx:id="name"/>
+        <TextField fx:id="nameField"/>
 
         <Label text="Raza"/>
-        <TextField fx:id="breed"/>
+        <TextField fx:id="breedField"/>
 
         <Label text="Altura"/>
-        <TextField fx:id="height"/>
+        <TextField fx:id="heightField"/>
 
         <Label text="Peso"/>
-        <TextField fx:id="weight"/>
+        <TextField fx:id="weightField"/>
 
         <Label text="Genero"/>
-        <TextField fx:id="gender"/>
+        <TextField fx:id="genderField"/>
 
         <Label text="Edad"/>
-        <TextField fx:id="age"/>
+        <TextField fx:id="ageField"/>
 
         <Button onAction="#setDog" text="Inscribir mascota"/>
 

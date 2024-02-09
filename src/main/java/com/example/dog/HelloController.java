@@ -6,17 +6,17 @@ import javafx.scene.control.TextField;
 
 public class HelloController {
     @FXML
-    TextField nameField = new TextField();
+    public TextField nameField = new TextField();
     @FXML
-    TextField breedField = new TextField();
+    public TextField breedField = new TextField();
     @FXML
-    TextField heightField = new TextField();
+    public TextField heightField = new TextField();
     @FXML
-    TextField weightField = new TextField();
+    public TextField weightField = new TextField();
     @FXML
-    TextField genderField = new TextField();
+    public TextField genderField = new TextField();
     @FXML
-    TextField ageField = new TextField();
+    public TextField ageField = new TextField();
 
     @FXML
     TextArea textArea = new TextArea();
@@ -33,7 +33,10 @@ public class HelloController {
                 Integer.parseInt(ageField.getText())
         );
 
-        textArea.setText(dog.name);
+        textArea.setText(
+                "Nombre:" + dog.name + "\nRaza: " + dog.breed + "\nAltura:" + dog.height + "\nPeso:" + dog.weight + "\nGenero:" + dog.getGender() + "\nEdad:" + dog.age
+
+        );
     }
 
 
